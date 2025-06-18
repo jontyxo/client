@@ -30,7 +30,7 @@ function AppWrapper() {
     setIncomingReport(null);
   };
 useEffect(() => {
-    const socket = new WebSocket('ws://localhost:432');
+    const socket = new WebSocket('ws://citymall-sldm.onrender.com/');
 
     socket.onmessage = (event) => {
       const msg = JSON.parse(event.data);

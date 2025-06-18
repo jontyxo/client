@@ -46,7 +46,7 @@ const handleEditClose = () => {
 
 const handleEditSave = async () => {
   try {
-    await axios.put(`http://localhost:432/api/disasters/${editData.id}`, {
+    await axios.put(`https://citymall-sldm.onrender.com/api/disasters/${editData.id}`, {
       title: editData.title,
       description: editData.description,
       tags: editData.tags
@@ -80,7 +80,7 @@ const handleViewOnMap = (id) => {
   if (!confirmed) return;
 
   try {
-    await axios.delete(`http://localhost:432/api/disasters/${id}`);
+    await axios.delete(`https://citymall-sldm.onrender.com/api/disasters/${id}`);
     toast.success("🗑️ Deleted successfully");
     setDisasters((prev) => prev.filter((d) => d.id !== id));
   } catch (error) {
@@ -90,7 +90,7 @@ const handleViewOnMap = (id) => {
 };
     const fetchDisasters = async () => {
       try {
-        const response = await axios.get('http://localhost:432/api/disasters/all');
+        const response = await axios.get('https://citymall-sldm.onrender.com/api/disasters/all');
           const classified = response.data.map(classifyDisaster);
         setDisasters(classified);
       } catch (error) {

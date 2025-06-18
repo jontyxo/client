@@ -61,7 +61,7 @@ const created_by = localStorage.getItem('userUUID');
 
     setLoading(true);
     try {
-      const response = await axios.post('http://localhost:432/api/disasters', {
+      const response = await axios.post('https://citymall-sldm.onrender.com/api/disasters', {
         title,
         description,
         tags,

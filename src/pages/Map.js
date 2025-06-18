@@ -29,7 +29,7 @@ function Map() {
   useEffect(() => {
     const fetchDisasters = async () => {
       try {
-        const res = await axios.get('http://localhost:432/api/disasters/all');
+        const res = await axios.get('https://citymall-sldm.onrender.com/api/disasters/all');
         setDisasters(res.data);
       } catch (err) {
         console.error('Failed to fetch disasters:', err);

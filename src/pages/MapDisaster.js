@@ -44,7 +44,8 @@ function MapDisaster() {
   useEffect(() => {
     const fetchDisaster = async () => {
       try {
-        const res = await axios.get(`http://localhost:432/api/disasters/disaster/${id}`);
+        const res = await axios.get(`
+https://citymall-sldm.onrender.com/api/disasters/disaster/${id}`);
         setDisaster(res.data);
       } catch (err) {
         console.error('Failed to fetch disaster:', err);
@@ -80,7 +81,8 @@ function MapDisaster() {
 
     const fetchNearby = async (lat, lng, km) => {
     try {
-      const res = await axios.get(`http://localhost:432/api/disasters/nearby?lat=${lat}&lng=${lng}&radius=${km*1000}`);
+      const res = await axios.get(`
+https://citymall-sldm.onrender.com/api/disasters/nearby?lat=${lat}&lng=${lng}&radius=${km*1000}`);
       setNearby(res.data);
     } catch (err) {
       console.error('Nearby fetch error:', err);
