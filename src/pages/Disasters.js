@@ -54,7 +54,7 @@ const handleEditSave = async () => {
     toast.success("✅ Disaster updated!");
     handleEditClose();
     fetchDisasters();
-    // Optionally refetch disasters
+  
   } catch (error) {
     console.error(error);
     toast.error("❌ Update failed");

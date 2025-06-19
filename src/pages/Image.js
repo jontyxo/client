@@ -14,7 +14,7 @@ function ImageAnalysis() {
   const [result, setResult] = useState('');
   const [loading, setLoading] = useState(false);
 
-  const API_KEY = 'AIzaSyDmcS1o6wpO5SUEUm7N43kCiKiQeIkmwUI'; // Replace with your Gemini API Key
+  const API_KEY = 'AIzaSyDmcS1o6wpO5SUEUm7N43kCiKiQeIkmwUI'; 
 
   const handleFileChange = (e) => {
     setFile(e.target.files[0]);

@@ -5,7 +5,7 @@ import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 
-// Fix Leaflet marker icons
+
 delete L.Icon.Default.prototype._getIconUrl;
 L.Icon.Default.mergeOptions({
   iconRetinaUrl: require('leaflet/dist/images/marker-icon-2x.png'),
@@ -16,7 +16,7 @@ L.Icon.Default.mergeOptions({
 
 
   const mainMarkerIcon = new L.Icon({
-  iconUrl: require('../../src/important.png'), // You can use a custom red icon
+  iconUrl: require('../../src/important.png'), 
   iconSize: [50, 50],
   iconAnchor: [12, 41],
   popupAnchor: [1, -34],
@@ -55,7 +55,7 @@ function Map() {
 
   const defaultCenter = [disasters[0].lat, disasters[0].lng];
 
-  // 🔍 Check if tags contain "urgent"
+
   const isUrgent = (tags = []) => tags.some(tag => tag.toLowerCase() === 'urgent');
 
   return (

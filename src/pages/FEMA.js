@@ -130,8 +130,8 @@ function FEMA() {
   size="large"
   sx={{
     '& .MuiPaginationItem-root': {
-      backgroundColor: '#ffe5ec', // light pink bg
-      color: '#7a003c',           // dark text
+      backgroundColor: '#ffe5ec',
+      color: '#7a003c',          
       fontWeight: 'bold',
       borderRadius: '12px',
       '&:hover': {

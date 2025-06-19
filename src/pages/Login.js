@@ -16,7 +16,7 @@ const handleLogin = (e) => {
 
   if (user) {
     localStorage.setItem('userEmail', user.email);
-    localStorage.setItem('userUUID', user.uuid); // 🔥 Save UUID too
+    localStorage.setItem('userUUID', user.uuid);
 
     toast.success('✅ Login successful!', {
       position: 'top-center',

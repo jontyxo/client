@@ -93,7 +93,7 @@ function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(!!localStorage.getItem('userEmail'));
   const location = useLocation();
 
-  // Listen to storage changes (like login or logout)
+ 
   useEffect(() => {
     const handleStorage = () => {
       setIsLoggedIn(!!localStorage.getItem('userEmail'));
@@ -102,7 +102,7 @@ function App() {
     return () => window.removeEventListener('storage', handleStorage);
   }, []);
 
-  // Optional: update login state on route changes
+
   useEffect(() => {
     setIsLoggedIn(!!localStorage.getItem('userEmail'));
   }, [location]);

@@ -31,8 +31,8 @@ function Sidebar() {
       width: 220,
       boxSizing: 'border-box',
       fontFamily: 'cardo-regular',
-      backgroundColor: '#F7374F', // ✅ move it here
-      color: '#fff' // optional: white text for contrast
+      backgroundColor: '#F7374F',
+      color: '#fff'
     }
   }}
 >
@@ -46,7 +46,7 @@ function Sidebar() {
       to={item.path}
       selected={location.pathname === item.path}
       sx={{
-        color: '#fff', // sets text color for ListItem
+        color: '#fff',
         '&.Mui-selected': {
           backgroundColor: '#ff3366',
         },

@@ -29,10 +29,9 @@ function MapDisaster() {
   const [loading, setLoading] = useState(true);
   const [nearby, setNearby] = useState([]);
   const mapRef = useRef();
-  const [radius, setRadius] = useState(10); // Default radius in km
-
+  const [radius, setRadius] = useState(10);
   const mainMarkerIcon = new L.Icon({
-  iconUrl: require('../../src/pin.png'), // You can use a custom red icon
+  iconUrl: require('../../src/pin.png'),
   iconSize: [25, 41],
   iconAnchor: [12, 41],
   popupAnchor: [1, -34],
@@ -98,10 +97,10 @@ https://citymall-sldm.onrender.com/api/disasters/nearby?lat=${lat}&lng=${lng}&ra
   };
 
 const getZoomLevel = (radiusInMeters) => {
-  // Basic approximation: adjust the constants if needed
+
   const scale = radiusInMeters / 500;
   const zoom = 16 - Math.log2(scale);
-  return Math.min(Math.max(zoom, 1), 18); // clamp between 1 and 18
+  return Math.min(Math.max(zoom, 1), 18);
 };
 
   return (
